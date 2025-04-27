@@ -1,40 +1,45 @@
 /* General Styles */
 :root {
-    --primary-color: #0077B6;
-    --background-color: #F8F9FA;
-    --text-color: #212529;
-    --secondary-accent: #CED4DA;
+    --primary-color: #2F4F4F; /* Dark Teal/Green from the image */
+    --background-color-light: #FFFFFF; /* Light background for sections */
+    --background-color-dark: #212529; /* Dark background for footer/text */
+    --text-color-dark: #212529; /* Dark grey text */
+    --text-color-light: #FFFFFF; /* White text for dark backgrounds */
+    --accent-color-light: #D3D3D3; /* Light grey for separators/borders */
+    --button-border-color: #D3D3D3; /* Button border color */
+    --button-text-color: #212529; /* Button text color */
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Keeping Open Sans for body for readability */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--background-color-light);
+    color: var(--text-color-dark);
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1200px; /* Adjust max-width if the image suggests a different width */
     margin: 0 auto;
 }
 
 .section-padding {
-    padding: 60px 0;
+    padding: 80px 0; /* Increased padding for more vertical space as seen in the image */
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif; /* Using Montserrat for headings */
     color: var(--primary-color);
     margin-bottom: 20px;
+    font-weight: 700; /* Bold headings */
 }
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.2em; }
+h1 { font-size: 3em; margin-bottom: 0.5em;} /* Adjusting sizes based on visual */
+h2 { font-size: 2.5em; }
+h3 { font-size: 1.8em; margin-bottom: 1em;}
+h4 { font-size: 1.4em; margin-bottom: 0.5em;}
 
 p {
     margin-bottom: 20px;
@@ -47,20 +52,21 @@ a {
 }
 
 a:hover {
-    color: #023E8A; /* Slightly darker shade */
+    color: #000; /* Darker hover for links */
 }
 
 /* Header */
 header {
-    background-color: #FFFFFF;
-    padding: 15px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color-light);
+    padding: 20px 0; /* Increased padding */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 header h1 {
     margin: 0;
-    color: var(--text-color);
-    font-size: 1.8em;
+    color: var(--text-color-dark);
+    font-size: 2em; /* Adjust header logo size */
+    font-weight: 700;
 }
 
 header .container {
@@ -78,15 +84,17 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 30px; /* Increased space between nav items */
 }
 
 nav ul li a {
-    color: var(--text-color);
+    color: var(--text-color-dark);
     font-weight: 600;
     padding: 5px 0;
     border-bottom: 2px solid transparent;
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    text-transform: uppercase; /* Uppercase nav text */
+    font-size: 0.9em;
 }
 
 nav ul li a:hover {
@@ -98,13 +106,13 @@ nav ul li a:hover {
 .hero-image {
     background-size: cover;
     background-position: center;
-    height: 60vh; /* Adjust as needed */
+    height: 70vh; /* Taller hero section */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
-    color: #FFFFFF;
+    color: var(--text-color-light);
 }
 
 .hero-overlay {
@@ -113,150 +121,235 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    background-color: rgba(0, 0, 0, 0.3); /* Lighter overlay */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.hero .container {
+     /* Center the text block within the overlay */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+
 .hero h2 {
-    color: #FFFFFF;
-    font-size: 3em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--text-color-light);
+    font-size: 3.5em; /* Larger hero heading */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.3em;
+    margin-bottom: 40px; /* More space below text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
     display: inline-block;
-    background-color: var(--primary-color);
-    color: #FFFFFF;
-    padding: 12px 25px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    background-color: transparent; /* Button has border, no fill in the image */
+    color: var(--button-text-color);
+    padding: 12px 30px; /* Adjusted padding */
+    border: 2px solid var(--button-border-color); /* Border from image */
+    border-radius: 0; /* Sharp corners */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .btn:hover {
-    background-color: #023E8A;
+    background-color: var(--primary-color); /* Fill on hover */
+    color: var(--text-color-light); /* White text on hover */
+    border-color: var(--primary-color); /* Border matches fill on hover */
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    /* If there's a secondary button style in the image, define it here. */
+    /* Based on the main button style, perhaps a filled primary button? */
+     background-color: var(--primary-color);
+     color: var(--text-color-light);
+     border: 2px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: #FFFFFF;
+     background-color: var(--background-color-light);
+     color: var(--primary-color);
+     border-color: var(--primary-color);
 }
 
 
 /* Intro Section */
+.intro {
+    background-color: var(--background-color-light); /* Light background */
+    text-align: center; /* Intro text seems centered */
+}
+
+.intro h3 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 1.5em;
+}
+
 .intro .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column size */
+    gap: 40px; /* Increased gap */
     margin-top: 40px;
 }
 
 .feature-item {
-    background-color: #FFFFFF;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    text-align: center;
+    background-color: var(--background-color-light); /* Feature items are on the light background */
+    padding: 0; /* Remove padding, content seems directly within the grid item */
+    border-radius: 0; /* Sharp corners */
+    box-shadow: none; /* No shadow visible */
+    text-align: left; /* Text aligns left within feature items */
     transition: transform 0.3s ease;
+    border-top: 4px solid var(--primary-color); /* Top border line */
+    padding-top: 20px; /* Space above text below border */
 }
 
 .feature-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Keep subtle hover effect */
 }
 
 .feature-item h4 {
-    color: var(--text-color);
+    color: var(--text-color-dark); /* Dark text for feature headings */
     margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
+/* Separator Line Style (seen between sections in the image) */
+.section-separator {
+    width: 80%; /* Adjust width as needed */
+    height: 1px;
+    background-color: var(--accent-color-light);
+    margin: 80px auto; /* Center and provide space */
+}
+
+
 /* Gallery Section */
+.gallery {
+     background-color: var(--background-color-light); /* Assuming gallery is on a light background */
+}
+
+.gallery h2 {
+    text-align: center; /* Center the gallery heading */
+    margin-bottom: 1.5em;
+}
+
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust column size for gallery */
+    gap: 30px; /* Increased gap */
     margin-top: 40px;
 }
 
 .gallery-item {
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0; /* Sharp corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for gallery items */
     position: relative;
+    background-color: var(--background-color-light);
 }
 
 .gallery-item img {
     display: block;
     width: 100%;
-    height: 200px; /* Fixed height for uniformity, adjust as needed */
+    height: 250px; /* Adjusted height, can be made responsive with aspect ratio */
     object-fit: cover; /* Crop image to fit */
     transition: transform 0.5s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1); /* Subtle zoom effect on hover */
+    transform: scale(1.05); /* Subtle zoom effect on hover */
 }
 
+/* Add a div below the image for text if needed, similar to the service blocks */
+/*
+.gallery-item .gallery-text {
+    padding: 15px;
+    text-align: center; // Or left, depending on desired style
+}
+
+.gallery-item .gallery-text h4 {
+    margin-bottom: 5px;
+}
+*/
+
+
 /* About and Contact Sections */
+.about, .contact {
+    background-color: var(--background-color-light); /* Light background */
+}
+
+.about h2, .contact h2 {
+    text-align: center; /* Center headings */
+    margin-bottom: 1.5em;
+}
+
+
 .contact-info {
     margin-top: 30px;
+    text-align: center; /* Center contact info */
 }
 
 .contact-info p {
     margin-bottom: 10px;
 }
 
+.contact-info a {
+    color: var(--primary-color);
+}
+
+
 /* Footer */
 footer {
-    background-color: var(--text-color);
-    color: #FFFFFF;
-    padding: 30px 0;
+    background-color: var(--background-color-dark); /* Dark background for footer */
+    color: var(--text-color-light); /* White text */
+    padding: 40px 0; /* Increased padding */
     text-align: center;
+    font-size: 0.9em;
 }
 
 footer .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack footer content vertically */
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 footer p {
-    margin: 0;
-    font-size: 0.9em;
+    margin: 0 0 15px 0; /* Space below copyright */
+    font-size: 1em;
 }
 
 .social-links a {
     display: inline-block;
-    margin-left: 15px;
+    margin: 0 10px; /* Space between social icons */
 }
 
 .social-links img {
     width: 24px;
     height: 24px;
+    filter: invert(1); /* Make icons white on dark background if they are dark */
     transition: transform 0.3s ease;
 }
 
 .social-links a:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2); /* Slightly larger hover effect */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.3em; }
+    h4 { font-size: 1.1em; }
+
     header .container {
         flex-direction: column;
         text-align: center;
@@ -268,14 +361,19 @@ footer p {
 
     nav ul {
         margin-top: 10px;
+        justify-content: center;
     }
 
     nav ul li {
         margin: 0 10px;
     }
 
+    .hero-image {
+        height: 50vh; /* Shorter hero on mobile */
+    }
+
     .hero h2 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     .hero p {
@@ -284,17 +382,50 @@ footer p {
 
     .intro .features {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-     footer .container {
-        flex-direction: column;
+     .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+     .section-padding {
+        padding: 50px 0;
+    }
+
+    .section-separator {
+        margin: 50px auto;
+    }
+
+    footer .container {
+        padding: 20px;
     }
 
     footer p {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.2em; }
+
+    .hero h2 {
+        font-size: 1.5em;
     }
 
-    .social-links {
-        margin-top: 10px;
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    nav ul li {
+        margin: 0 8px;
     }
 }
