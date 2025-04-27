@@ -1,72 +1,63 @@
-/* General Styles */
+/* General Styles - Farmora Emulation */
 :root {
-    --primary-color: #2F4F4F; /* Dark Teal/Green from the image */
-    --background-color-light: #FFFFFF; /* Light background for sections */
-    --background-color-dark: #212529; /* Dark background for footer/text */
-    --text-color-dark: #212529; /* Dark grey text */
-    --text-color-light: #FFFFFF; /* White text for dark backgrounds */
-    --accent-color-light: #D3D3D3; /* Light grey for separators/borders */
-    --button-border-color: #D3D3D3; /* Button border color */
-    --button-text-color: #212529; /* Button text color */
+    --primary-green: #70C174; /* Vibrant green from the image */
+    --dark-text: #212529; /* Dark grey/black text */
+    --light-background: #FFFFFF; /* White background */
+    --light-grey-border: #E0E0E0; /* Light grey for borders/separators */
+    --hero-overlay-start: rgba(0, 0, 0, 0.5); /* Dark part of hero overlay */
+    --hero-overlay-end: rgba(0, 0, 0, 0.1); /* Lighter part of hero overlay */
 }
 
 body {
-    font-family: 'Open Sans', sans-serif; /* Keeping Open Sans for body for readability */
+    font-family: 'Inter', sans-serif; /* Using Inter for body */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color-light);
-    color: var(--text-color-dark);
+    background-color: #F8F8F8; /* Very light grey background for the page */
+    color: var(--dark-text);
 }
 
 .container {
     width: 90%;
-    max-width: 1200px; /* Adjust max-width if the image suggests a different width */
+    max-width: 1200px; /* Adjust max-width if needed */
     margin: 0 auto;
 }
 
-.section-padding {
-    padding: 80px 0; /* Increased padding for more vertical space as seen in the image */
+section {
+    padding: 80px 0; /* Consistent section padding */
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif; /* Using Montserrat for headings */
-    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif; /* Using Roboto for headings */
+    color: var(--dark-text);
     margin-bottom: 20px;
-    font-weight: 700; /* Bold headings */
+    font-weight: 700;
 }
 
-h1 { font-size: 3em; margin-bottom: 0.5em;} /* Adjusting sizes based on visual */
+h1 { font-size: 3.5em; margin-bottom: 0.3em;}
 h2 { font-size: 2.5em; }
-h3 { font-size: 1.8em; margin-bottom: 1em;}
-h4 { font-size: 1.4em; margin-bottom: 0.5em;}
+h3 { font-size: 1.8em; margin-bottom: 0.8em;}
+h4 { font-size: 1.2em; margin-bottom: 0.5em;}
 
 p {
     margin-bottom: 20px;
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--primary-green);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #000; /* Darker hover for links */
+    color: #5a9b5d; /* Slightly darker green on hover */
 }
 
-/* Header */
+/* Header - Farmora Style */
 header {
-    background-color: var(--background-color-light);
-    padding: 20px 0; /* Increased padding */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-header h1 {
-    margin: 0;
-    color: var(--text-color-dark);
-    font-size: 2em; /* Adjust header logo size */
-    font-weight: 700;
+    background-color: var(--light-background);
+    padding: 15px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
 }
 
 header .container {
@@ -74,6 +65,12 @@ header .container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--dark-text);
 }
 
 nav ul {
@@ -84,348 +81,365 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 30px; /* Increased space between nav items */
+    margin-left: 25px;
 }
 
 nav ul li a {
-    color: var(--text-color-dark);
-    font-weight: 600;
+    color: var(--dark-text);
+    font-weight: 400; /* Lighter weight for nav links */
     padding: 5px 0;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s ease, border-bottom-color 0.3s ease;
-    text-transform: uppercase; /* Uppercase nav text */
-    font-size: 0.9em;
+    transition: color 0.3s ease;
+     font-size: 1em;
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
-    border-bottom-color: var(--primary-color);
+    color: var(--primary-green);
 }
 
-/* Hero Section */
-.hero-image {
+.btn-login {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--dark-text);
+    padding: 8px 20px;
+    border: 1px solid var(--light-grey-border);
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+     font-size: 1em;
+}
+
+.btn-login:hover {
+    background-color: var(--dark-text);
+    color: var(--light-background);
+    border-color: var(--dark-text);
+}
+
+
+/* Hero Section - Farmora Style */
+.hero-farmora {
+    background-image: url('assets/images/farmora-hero.jpg'); /* Placeholder hero image */
     background-size: cover;
     background-position: center;
-    height: 70vh; /* Taller hero section */
+    height: 80vh; /* Tall hero section */
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    color: var(--text-color-light);
+    justify-content: space-between; /* Space between left content and right info */
+    padding: 0 5%; /* Add some horizontal padding */
+    color: var(--text-color-light); /* Default text color for hero */
 }
 
-.hero-overlay {
+.hero-farmora::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Lighter overlay */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(to right, var(--hero-overlay-start), var(--hero-overlay-end)); /* Gradient overlay */
+    z-index: 1;
 }
 
-.hero .container {
-     /* Center the text block within the overlay */
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-}
-
-.hero h2 {
-    color: var(--text-color-light);
-    font-size: 3.5em; /* Larger hero heading */
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.3em;
-    margin-bottom: 40px; /* More space below text */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.btn {
-    display: inline-block;
-    background-color: transparent; /* Button has border, no fill in the image */
-    color: var(--button-text-color);
-    padding: 12px 30px; /* Adjusted padding */
-    border: 2px solid var(--button-border-color); /* Border from image */
-    border-radius: 0; /* Sharp corners */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.btn:hover {
-    background-color: var(--primary-color); /* Fill on hover */
-    color: var(--text-color-light); /* White text on hover */
-    border-color: var(--primary-color); /* Border matches fill on hover */
-}
-
-.btn-secondary {
-    /* If there's a secondary button style in the image, define it here. */
-    /* Based on the main button style, perhaps a filled primary button? */
-     background-color: var(--primary-color);
-     color: var(--text-color-light);
-     border: 2px solid var(--primary-color);
-}
-
-.btn-secondary:hover {
-     background-color: var(--background-color-light);
-     color: var(--primary-color);
-     border-color: var(--primary-color);
-}
-
-
-/* Intro Section */
-.intro {
-    background-color: var(--background-color-light); /* Light background */
-    text-align: center; /* Intro text seems centered */
-}
-
-.intro h3 {
-    text-align: center; /* Center the heading */
-    margin-bottom: 1.5em;
-}
-
-.intro .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column size */
-    gap: 40px; /* Increased gap */
-    margin-top: 40px;
-}
-
-.feature-item {
-    background-color: var(--background-color-light); /* Feature items are on the light background */
-    padding: 0; /* Remove padding, content seems directly within the grid item */
-    border-radius: 0; /* Sharp corners */
-    box-shadow: none; /* No shadow visible */
-    text-align: left; /* Text aligns left within feature items */
-    transition: transform 0.3s ease;
-    border-top: 4px solid var(--primary-color); /* Top border line */
-    padding-top: 20px; /* Space above text below border */
-}
-
-.feature-item:hover {
-    transform: translateY(-5px); /* Keep subtle hover effect */
-}
-
-.feature-item h4 {
-    color: var(--text-color-dark); /* Dark text for feature headings */
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-/* Separator Line Style (seen between sections in the image) */
-.section-separator {
-    width: 80%; /* Adjust width as needed */
-    height: 1px;
-    background-color: var(--accent-color-light);
-    margin: 80px auto; /* Center and provide space */
-}
-
-
-/* Gallery Section */
-.gallery {
-     background-color: var(--background-color-light); /* Assuming gallery is on a light background */
-}
-
-.gallery h2 {
-    text-align: center; /* Center the gallery heading */
-    margin-bottom: 1.5em;
-}
-
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust column size for gallery */
-    gap: 30px; /* Increased gap */
-    margin-top: 40px;
-}
-
-.gallery-item {
-    overflow: hidden;
-    border-radius: 0; /* Sharp corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for gallery items */
+.hero-content-box {
     position: relative;
-    background-color: var(--background-color-light);
+    z-index: 2;
+    width: 50%; /* Adjust width of the content box */
+    color: var(--light-background);
+    /* Added styling to match the visual */
+    padding: 30px; /* Example padding */
+    /* background-color: rgba(255, 255, 255, 0.1); /* Optional: slight transparent background */
+    /* border-radius: 8px; /* Optional: rounded corners */
 }
 
-.gallery-item img {
-    display: block;
-    width: 100%;
-    height: 250px; /* Adjusted height, can be made responsive with aspect ratio */
-    object-fit: cover; /* Crop image to fit */
-    transition: transform 0.5s ease;
+.hero-content-box h1 {
+    color: var(--light-background);
+    font-size: 3.8em; /* Larger heading */
+    line-height: 1.1;
+    margin-bottom: 0.5em;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.05); /* Subtle zoom effect on hover */
+.hero-content-box p {
+    font-size: 1.1em;
+    margin-bottom: 2em;
 }
 
-/* Add a div below the image for text if needed, similar to the service blocks */
-/*
-.gallery-item .gallery-text {
-    padding: 15px;
-    text-align: center; // Or left, depending on desired style
+.hero-right-info {
+    position: relative;
+    z-index: 2;
+    width: 40%; /* Adjust width */
+    color: var(--light-background);
+    /* Added styling to match the visual */
+    background-color: rgba(255, 255, 255, 0.1); /* Example transparent background */
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
 }
 
-.gallery-item .gallery-text h4 {
+.hero-right-info h4 {
+    color: var(--light-background);
+    margin-bottom: 10px;
+}
+
+.hero-right-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.hero-right-info ul li {
     margin-bottom: 5px;
 }
-*/
 
-
-/* About and Contact Sections */
-.about, .contact {
-    background-color: var(--background-color-light); /* Light background */
+.hero-right-info a {
+    color: var(--light-background);
+    font-weight: 600;
 }
 
-.about h2, .contact h2 {
-    text-align: center; /* Center headings */
-    margin-bottom: 1.5em;
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: var(--light-background);
+    padding: 12px 30px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #5a9b5d; /* Slightly darker green on hover */
+}
+
+.text-link {
+    color: var(--dark-text);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--primary-green);
 }
 
 
-.contact-info {
-    margin-top: 30px;
-    text-align: center; /* Center contact info */
+/* About Section - Farmora Style */
+.section-about-farmora {
+    background-color: var(--light-background);
 }
 
-.contact-info p {
+.tab-navigation {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--light-grey-border);
+    padding-bottom: 10px;
+}
+
+.tab-link {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    color: var(--dark-text);
+    font-weight: 600;
+}
+
+.tab-link.active {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.about-content-wrapper {
+    display: flex;
+    gap: 40px; /* Space between text and image */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.about-text {
+    flex: 1; /* Take up available space */
+     min-width: 300px; /* Minimum width before wrapping */
+}
+
+.about-image {
+    flex: 1; /* Take up available space */
+     min-width: 300px; /* Minimum width before wrapping */
+     text-align: center; /* Center image if it doesn't fill the container */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Subtle rounded corners for image */
+}
+
+
+/* Stats Section - Farmora Style */
+.section-stats-farmora {
+    background-color: #F8F8F8; /* Match page background */
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid for stats */
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    background-color: var(--light-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide overflowing image corners */
+}
+
+.stat-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for stat images */
+    object-fit: cover;
+}
+
+.stat-text {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 5px;
+}
+
+.stat-highlight {
+    background-color: var(--primary-green);
+    color: var(--light-background);
+    display: inline-block; /* Needed for padding/margin */
+    padding: 5px 15px;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
-.contact-info a {
-    color: var(--primary-color);
+.stat-description {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark-text);
 }
 
 
-/* Footer */
+/* Footer - Farmora Style (Basic) */
 footer {
-    background-color: var(--background-color-dark); /* Dark background for footer */
-    color: var(--text-color-light); /* White text */
-    padding: 40px 0; /* Increased padding */
+    background-color: var(--dark-text); /* Dark footer */
+    color: var(--light-background);
+    padding: 30px 0;
     text-align: center;
     font-size: 0.9em;
 }
 
-footer .container {
-    display: flex;
-    flex-direction: column; /* Stack footer content vertically */
-    align-items: center;
-    justify-content: center;
-}
-
 footer p {
-    margin: 0 0 15px 0; /* Space below copyright */
-    font-size: 1em;
+    margin: 0;
 }
 
-.social-links a {
-    display: inline-block;
-    margin: 0 10px; /* Space between social icons */
-}
-
-.social-links img {
-    width: 24px;
-    height: 24px;
-    filter: invert(1); /* Make icons white on dark background if they are dark */
-    transition: transform 0.3s ease;
-}
-
-.social-links a:hover img {
-    transform: scale(1.2); /* Slightly larger hover effect */
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.8em; }
-    h3 { font-size: 1.3em; }
-    h4 { font-size: 1.1em; }
+    h1 { font-size: 2.8em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
 
-    header .container {
-        flex-direction: column;
-        text-align: center;
+    .hero-farmora {
+        flex-direction: column; /* Stack hero content vertically */
+        height: auto;
+        padding: 80px 5%; /* Add padding top/bottom */
     }
 
-    header h1 {
-        margin-bottom: 10px;
+    .hero-content-box {
+        width: 100%; /* Full width */
+        margin-bottom: 30px;
+        padding: 0; /* Remove padding if added for visual separation */
+        background-color: transparent; /* Remove background */
     }
 
-    nav ul {
-        margin-top: 10px;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-
-    .hero-image {
-        height: 50vh; /* Shorter hero on mobile */
-    }
-
-    .hero h2 {
-        font-size: 1.8em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
-
-    .intro .features {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-     .image-gallery {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-     .section-padding {
-        padding: 50px 0;
-    }
-
-    .section-separator {
-        margin: 50px auto;
-    }
-
-    footer .container {
+    .hero-right-info {
+        width: 100%; /* Full width */
+        background-color: rgba(255, 255, 255, 0.2); /* Keep a slight background */
         padding: 20px;
     }
 
-    footer p {
-        margin-bottom: 10px;
+    .about-content-wrapper {
+        flex-direction: column; /* Stack about content vertically */
+        gap: 30px;
+    }
+
+    .tab-navigation {
+         overflow-x: auto; /* Add horizontal scroll for tabs if they overflow */
+         white-space: nowrap; /* Prevent tabs from wrapping */
+         text-align: left; /* Align tabs to the left */
+    }
+
+    .tab-link {
+        flex: 1 1 auto; /* Allow tabs to shrink/grow */
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr; /* Stack stats vertically */
     }
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 1.8em; }
-    h2 { font-size: 1.5em; }
-    h3 { font-size: 1.2em; }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.3em; }
 
-    .hero h2 {
+    .logo {
         font-size: 1.5em;
     }
 
-    .hero p {
-        font-size: 0.9em;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9em;
+    nav ul {
+        flex-direction: column; /* Stack nav items */
+        align-items: center;
+        margin-top: 15px;
     }
 
     nav ul li {
-        margin: 0 8px;
+        margin: 5px 0;
+    }
+
+    .btn-login {
+        margin-top: 15px;
+    }
+
+    .hero-content-box h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content-box p {
+        font-size: 1em;
+    }
+
+    .btn-primary {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+
+    .tab-link {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    .stat-number {
+        font-size: 2em;
+    }
+
+    .stat-description {
+        font-size: 1em;
     }
 }
