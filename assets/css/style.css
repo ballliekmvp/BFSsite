@@ -1,0 +1,268 @@
+/* Custom CSS for Brain Food Society Website */
+
+/* Color Variables (Based on Techy Academic Palette) */
+:root {
+    --primary-color: #0A2E4F; /* Deep Navy */
+    --secondary-color: #00A896; /* Teal */
+    --accent-color: #FFD166; /* Sunrise Yellow */
+    --background-color: #F8F9FA; /* Light Gray */
+    --text-color: #343A40; /* Dark Gray */
+    --white: #FFFFFF;
+    --dark: #212529;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    margin-top: 70px; /* Offset for fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* Microinteraction: Smooth color transition on hover */
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: var(--primary-color) !important; /* Use important to override Bootstrap default */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: var(--white) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-nav .nav-link {
+    color: var(--white) !important;
+    margin: 0 10px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out; /* Microinteraction */
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease-in-out; /* Microinteraction: Underline expands on hover */
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* Hero Section */
+.hero-section {
+    background: url('../images/hero-placeholder.jpg') no-repeat center center; /* Placeholder background image */
+    background-size: cover;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Overlay for text readability */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Microinteraction */
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px); /* Microinteraction: Lift button slightly on hover */
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Microinteraction */
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px); /* Microinteraction: Lift button slightly on hover */
+}
+
+
+/* Section Padding */
+.section-padding {
+    padding: 60px 0;
+}
+
+/* About Section Styles (Example) */
+#about .lead {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* Gallery Section */
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Microinteraction */
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Microinteraction */
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Microinteraction: Lift image slightly */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Microinteraction: Zoom in slightly on image */
+}
+
+/* Blog Section */
+.blog-post {
+    background-color: var(--white);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Microinteraction */
+}
+
+.blog-post:hover {
+     transform: translateY(-5px); /* Microinteraction: Lift post slightly */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.blog-post h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.blog-post .meta {
+    font-size: 0.9rem;
+    color: #6c757d; /* Bootstrap secondary text color */
+    margin-bottom: 15px;
+}
+
+.blog-post a {
+     color: var(--secondary-color);
+     font-weight: bold;
+}
+
+
+/* Contact Section */
+#contact .contact-info p {
+    margin-bottom: 10px;
+}
+
+#contact .social-links a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out; /* Microinteraction */
+}
+
+#contact .social-links a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--secondary-color);
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+/* Responsive Adjustments (Bootstrap handles much of this, but add if needed) */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
