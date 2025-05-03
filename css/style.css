@@ -1,37 +1,37 @@
 /* General Styles - Farmora Emulation */
 :root {
-    --primary-green: #70C174; /* Vibrant green from the image */
-    --dark-text: #212529; /* Dark grey/black text */
-    --light-background: #FFFFFF; /* White background */
-    --light-grey-border: #E0E0E0; /* Light grey for borders/separators */
-    --hero-overlay-start: rgba(0, 0, 0, 0.5); /* Dark part of hero overlay */
-    --hero-overlay-end: rgba(0, 0, 0, 0.1); /* Lighter part of hero overlay */
+    --primary-green: #70C174; /* Vibrant green from the image */
+    --dark-text: #212529; /* Dark grey/black text */
+    --light-background: #FFFFFF; /* White background */
+    --light-grey-border: #E0E0E0; /* Light grey for borders/separators */
+    --hero-overlay-start: rgba(0, 0, 0, 0.5); /* Dark part of hero overlay */
+    --hero-overlay-end: rgba(0, 0, 0, 0.1); /* Lighter part of hero overlay */
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Using Inter for body */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #F8F8F8; /* Very light grey background for the page */
-    color: var(--dark-text);
+    font-family: 'Inter', sans-serif; /* Using Inter for body */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8; /* Very light grey background for the page */
+    color: var(--dark-text);
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px; /* Adjust max-width if needed */
-    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px; /* Adjust max-width if needed */
+    margin: 0 auto;
 }
 
 section {
-    padding: 80px 0; /* Consistent section padding */
+    padding: 80px 0; /* Consistent section padding */
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Roboto', sans-serif; /* Using Roboto for headings */
-    color: var(--dark-text);
-    margin-bottom: 20px;
-    font-weight: 700;
+    font-family: 'Roboto', sans-serif; /* Using Roboto for headings */
+    color: var(--dark-text);
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 h1 { font-size: 3.5em; margin-bottom: 0.3em;}
@@ -40,406 +40,480 @@ h3 { font-size: 1.8em; margin-bottom: 0.8em;}
 h4 { font-size: 1.2em; margin-bottom: 0.5em;}
 
 p {
-    margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 a {
-    color: var(--primary-green);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #5a9b5d; /* Slightly darker green on hover */
+    color: #5a9b5d; /* Slightly darker green on hover */
 }
 
 /* Header - Farmora Style */
 header {
-    background-color: var(--light-background);
-    padding: 15px 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    background-color: var(--light-background);
+    padding: 15px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
 }
 
 header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: var(--dark-text);
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--dark-text);
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    margin-left: 25px;
+    margin-left: 25px;
 }
 
 nav ul li a {
-    color: var(--dark-text);
-    font-weight: 400; /* Lighter weight for nav links */
-    padding: 5px 0;
-    transition: color 0.3s ease;
-     font-size: 1em;
+    color: var(--dark-text);
+    font-weight: 400; /* Lighter weight for nav links */
+    padding: 5px 0;
+    transition: color 0.3s ease;
+     font-size: 1em;
 }
 
 nav ul li a:hover {
-    color: var(--primary-green);
+    color: var(--primary-green);
 }
 
 .btn-login {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--dark-text);
-    padding: 8px 20px;
-    border: 1px solid var(--light-grey-border);
-    border-radius: 5px; /* Slightly rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-     font-size: 1em;
+    display: inline-block;
+    background-color: transparent;
+    color: var(--dark-text);
+    padding: 8px 20px;
+    border: 1px solid var(--light-grey-border);
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+     font-size: 1em;
 }
 
 .btn-login:hover {
-    background-color: var(--dark-text);
-    color: var(--light-background);
-    border-color: var(--dark-text);
+    background-color: var(--dark-text);
+    color: var(--light-background);
+    border-color: var(--dark-text);
 }
 
 
 /* Hero Section - Farmora Style */
 .hero-farmora {
-    background-image: url('assets/images/farmora-hero.jpg'); /* Placeholder hero image */
-    background-size: cover;
-    background-position: center;
-    height: 80vh; /* Tall hero section */
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space between left content and right info */
-    padding: 0 5%; /* Add some horizontal padding */
-    color: var(--text-color-light); /* Default text color for hero */
+    /* Removed background-image here */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Tall hero section */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between left content and right info */
+    padding: 0 5%; /* Add some horizontal padding */
+    color: var(--text-color-light); /* Default text color for hero */
+    overflow: hidden; /* Hide overflowing parts of the image */
 }
 
-.hero-farmora::before {
-    content: '';
+/* Added style for the background image */
+.hero-farmora .hero-background-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, var(--hero-overlay-start), var(--hero-overlay-end)); /* Gradient overlay */
-    z-index: 1;
+    object-fit: cover; /* Cover the entire area */
+    z-index: 0; /* Place the image behind other content */
+}
+
+
+.hero-farmora::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--hero-overlay-start), var(--hero-overlay-end)); /* Gradient overlay */
+    z-index: 1; /* Place the overlay above the image */
 }
 
 .hero-content-box {
-    position: relative;
-    z-index: 2;
-    width: 50%; /* Adjust width of the content box */
-    color: var(--light-background);
-    /* Added styling to match the visual */
-    padding: 30px; /* Example padding */
-    /* background-color: rgba(255, 255, 255, 0.1); /* Optional: slight transparent background */
-    /* border-radius: 8px; /* Optional: rounded corners */
+    position: relative;
+    z-index: 2; /* Place the content above the overlay and image */
+    width: 50%; /* Adjust width of the content box */
+    color: var(--light-background);
+    /* Added styling to match the visual */
+    padding: 30px; /* Example padding */
+    /* background-color: rgba(255, 255, 255, 0.1); /* Optional: slight transparent background */
+    /* border-radius: 8px; /* Optional: rounded corners */
 }
 
 .hero-content-box h1 {
-    color: var(--light-background);
-    font-size: 3.8em; /* Larger heading */
-    line-height: 1.1;
-    margin-bottom: 0.5em;
+    color: var(--light-background);
+    font-size: 3.8em; /* Larger heading */
+    line-height: 1.1;
+    margin-bottom: 0.5em;
 }
 
 .hero-content-box p {
-    font-size: 1.1em;
-    margin-bottom: 2em;
+    font-size: 1.1em;
+    margin-bottom: 2em;
 }
 
 .hero-right-info {
-    position: relative;
-    z-index: 2;
-    width: 40%; /* Adjust width */
-    color: var(--light-background);
-    /* Added styling to match the visual */
-    background-color: rgba(255, 255, 255, 0.1); /* Example transparent background */
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 0.9em;
+    position: relative;
+    z-index: 2; /* Place the info box above the overlay and image */
+    width: 40%; /* Adjust width */
+    color: var(--light-background);
+    /* Added styling to match the visual */
+    background-color: rgba(255, 255, 255, 0.1); /* Example transparent background */
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
 }
 
 .hero-right-info h4 {
-    color: var(--light-background);
-    margin-bottom: 10px;
+    color: var(--light-background);
+    margin-bottom: 10px;
 }
 
 .hero-right-info ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 15px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
 }
 
 .hero-right-info ul li {
-    margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .hero-right-info a {
-    color: var(--light-background);
-    font-weight: 600;
+    color: var(--light-background);
+    font-weight: 600;
 }
 
 .btn-primary {
-    display: inline-block;
-    background-color: var(--primary-green);
-    color: var(--light-background);
-    padding: 12px 30px;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease;
-    font-weight: 600;
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: var(--light-background);
+    padding: 12px 30px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
-    background-color: #5a9b5d; /* Slightly darker green on hover */
+    background-color: #5a9b5d; /* Slightly darker green on hover */
 }
 
 .text-link {
-    color: var(--dark-text);
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: var(--dark-text);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .text-link:hover {
-    color: var(--primary-green);
+    color: var(--primary-green);
 }
 
 
 /* About Section - Farmora Style */
 .section-about-farmora {
-    background-color: var(--light-background);
+    background-color: var(--light-background);
 }
 
 .tab-navigation {
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 1px solid var(--light-grey-border);
-    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--light-grey-border);
+    padding-bottom: 10px;
 }
 
 .tab-link {
-    background: none;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    color: var(--dark-text);
-    font-weight: 600;
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    color: var(--dark-text);
+    font-weight: 600;
 }
 
 .tab-link.active {
-    color: var(--primary-green);
-    border-bottom: 2px solid var(--primary-green);
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
 }
 
 .tab-content {
-    display: none;
+    display: none;
 }
 
 .tab-content.active {
-    display: block;
+    display: block;
 }
 
 .about-content-wrapper {
-    display: flex;
-    gap: 40px; /* Space between text and image */
-    align-items: center; /* Vertically align items */
-    flex-wrap: wrap; /* Wrap on smaller screens */
+    display: flex;
+    gap: 40px; /* Space between text and image */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Wrap on smaller screens */
 }
 
 .about-text {
-    flex: 1; /* Take up available space */
-     min-width: 300px; /* Minimum width before wrapping */
+    flex: 1; /* Take up available space */
+     min-width: 300px; /* Minimum width before wrapping */
 }
 
 .about-image {
-    flex: 1; /* Take up available space */
-     min-width: 300px; /* Minimum width before wrapping */
-     text-align: center; /* Center image if it doesn't fill the container */
+    flex: 1; /* Take up available space */
+     min-width: 300px; /* Minimum width before wrapping */
+     text-align: center; /* Center image if it doesn't fill the container */
 }
 
 .about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Subtle rounded corners for image */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Subtle rounded corners for image */
 }
 
 
 /* Stats Section - Farmora Style */
 .section-stats-farmora {
-    background-color: #F8F8F8; /* Match page background */
+    background-color: #F8F8F8; /* Match page background */
 }
 
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid for stats */
-    gap: 40px;
-    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid for stats */
+    gap: 40px;
+    margin-top: 40px;
 }
 
 .stat-item {
-    background-color: var(--light-background);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Hide overflowing image corners */
+    background-color: var(--light-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide overflowing image corners */
 }
 
 .stat-item img {
-    width: 100%;
-    height: 200px; /* Fixed height for stat images */
-    object-fit: cover;
+    width: 100%;
+    height: 200px; /* Fixed height for stat images */
+    object-fit: cover;
 }
 
 .stat-text {
-    padding: 20px;
+    padding: 20px;
 }
 
 .stat-number {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: var(--dark-text);
-    margin-bottom: 5px;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 5px;
 }
 
 .stat-highlight {
-    background-color: var(--primary-green);
-    color: var(--light-background);
-    display: inline-block; /* Needed for padding/margin */
-    padding: 5px 15px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    background-color: var(--primary-green);
+    color: var(--light-background);
+    display: inline-block; /* Needed for padding/margin */
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .stat-description {
-    font-size: 1.1em;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: var(--dark-text);
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark-text);
 }
 
 
 /* Footer - Farmora Style (Basic) */
 footer {
-    background-color: var(--dark-text); /* Dark footer */
-    color: var(--light-background);
-    padding: 30px 0;
-    text-align: center;
-    font-size: 0.9em;
+    background-color: var(--dark-text); /* Dark footer */
+    color: var(--light-background);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
 }
 
 footer p {
-    margin: 0;
+    margin: 0;
 }
 
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    h1 { font-size: 2.8em; }
-    h2 { font-size: 2em; }
-    h3 { font-size: 1.5em; }
+    h1 { font-size: 2.8em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
 
-    .hero-farmora {
-        flex-direction: column; /* Stack hero content vertically */
-        height: auto;
-        padding: 80px 5%; /* Add padding top/bottom */
-    }
+    .hero-farmora {
+        flex-direction: column; /* Stack hero content vertically */
+        height: auto;
+        padding: 80px 5%; /* Add padding top/bottom */
+    }
 
-    .hero-content-box {
-        width: 100%; /* Full width */
-        margin-bottom: 30px;
-        padding: 0; /* Remove padding if added for visual separation */
-        background-color: transparent; /* Remove background */
-    }
+    .hero-content-box {
+        width: 100%; /* Full width */
+        margin-bottom: 30px;
+        padding: 0; /* Remove padding if added for visual separation */
+        background-color: transparent; /* Remove background */
+    }
 
-    .hero-right-info {
-        width: 100%; /* Full width */
-        background-color: rgba(255, 255, 255, 0.2); /* Keep a slight background */
-        padding: 20px;
-    }
+    .hero-right-info {
+        width: 100%; /* Full width */
+        background-color: rgba(255, 255, 255, 0.2); /* Keep a slight background */
+        padding: 20px;
+    }
 
-    .about-content-wrapper {
-        flex-direction: column; /* Stack about content vertically */
-        gap: 30px;
-    }
+    .about-content-wrapper {
+        flex-direction: column; /* Stack about content vertically */
+        gap: 30px;
+    }
 
-    .tab-navigation {
-         overflow-x: auto; /* Add horizontal scroll for tabs if they overflow */
-         white-space: nowrap; /* Prevent tabs from wrapping */
-         text-align: left; /* Align tabs to the left */
-    }
+    .tab-navigation {
+         overflow-x: auto; /* Add horizontal scroll for tabs if they overflow */
+         white-space: nowrap; /* Prevent tabs from wrapping */
+         text-align: left; /* Align tabs to the left */
+    }
 
-    .tab-link {
-        flex: 1 1 auto; /* Allow tabs to shrink/grow */
-    }
+    .tab-link {
+        flex: 1 1 auto; /* Allow tabs to shrink/grow */
+    }
 
-    .stats-grid {
-        grid-template-columns: 1fr; /* Stack stats vertically */
-    }
+    .stats-grid {
+        grid-template-columns: 1fr; /* Stack stats vertically */
+    }
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.8em; }
-    h3 { font-size: 1.3em; }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.3em; }
 
-    .logo {
-        font-size: 1.5em;
-    }
+    .logo {
+        font-size: 1.5em;
+    }
 
-    nav ul {
-        flex-direction: column; /* Stack nav items */
-        align-items: center;
-        margin-top: 15px;
-    }
+    nav ul {
+        flex-direction: column; /* Stack nav items */
+        align-items: center;
+        margin-top: 15px;
+    }
 
-    nav ul li {
-        margin: 5px 0;
-    }
+    nav ul li {
+        margin: 5px 0;
+    }
 
-    .btn-login {
-        margin-top: 15px;
-    }
+    .btn-login {
+        margin-top: 15px;
+    }
 
-    .hero-content-box h1 {
-        font-size: 2.5em;
-    }
+    .hero-content-box h1 {
+        font-size: 2.5em;
+    }
 
-    .hero-content-box p {
-        font-size: 1em;
-    }
+    .hero-content-box p {
+        font-size: 1em;
+    }
 
-    .btn-primary {
-        padding: 10px 25px;
-        font-size: 0.9em;
-    }
+    .btn-primary {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
 
-    .tab-link {
-        padding: 8px 15px;
-        font-size: 1em;
-    }
+    .tab-link {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
 
-    .stat-number {
-        font-size: 2em;
-    }
+    .stat-number {
+        font-size: 2em;
+    }
 
-    .stat-description {
-        font-size: 1em;
-    }
+    .stat-description {
+        font-size: 1em;
+    }
+}
+
+/* Added style for the blog post content */
+.blog-post .post-content img {
+    max-width: 100%; /* Ensure images within blog posts are responsive */
+    height: auto;
+    display: block; /* Prevent extra space below image */
+    margin: 20px auto; /* Center images and add vertical space */
+    border-radius: 8px; /* Optional: match other image styles */
+}
+
+/* Basic styling for blog post elements */
+.blog-post h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.blog-post .meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.blog-post .post-content {
+    line-height: 1.7;
+}
+
+.blog-post .post-content p {
+    margin-bottom: 15px;
+}
+
+.blog-post .post-content ul,
+.blog-post .post-content ol {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.blog-post .post-content li {
+    margin-bottom: 5px;
+}
+
+.blog-post .post-content code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    background-color: #eee;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.blog-post .post-content pre {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto; /* Add scroll for long code lines */
+    margin-bottom: 15px;
+}
+
+.blog-post .post-content blockquote {
+    border-left: 4px solid var(--primary-green);
+    padding-left: 15px;
+    color: #555;
+    margin: 15px 0;
 }
